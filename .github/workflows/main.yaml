@@ -1,0 +1,42 @@
+name: CI/CD
+
+on:
+  push:
+    branches:
+      - "master"
+    paths:
+      - "static/img/communities/optimized/*"
+      - "static/img/sponsors/optimized/*"
+      - "static/svg/**"
+      - "static/*"
+      - "src/**"
+      - ".eleventy.js"
+
+jobs:
+  build:
+    name: Build & deploy website
+    runs-on: ubuntu-latest
+    steps:
+      # you must check out the repository
+      - uses: actions/checkout@v2
+      # setup node
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      # add npm cache
+      - uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      # install node dependencies
+      - run: npm i
+      # compile
+      - run: npm run build
+      - name: Configure CI credentials
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: ./bin/configure-ci
+      - name: deploy
+        run: ./bin/deploy
