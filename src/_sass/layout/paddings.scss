@@ -1,0 +1,33 @@
+// See https://tailwindcss.com/docs/margin
+$padding-0: 0;
+$padding-1: 0.25rem;
+$padding-2: 0.5rem;
+$padding-3: 0.75rem;
+$padding-4: 1rem;
+$padding-5: 1.25rem;
+$padding-6: 1.5rem;
+$padding-8: 2rem;
+$padding-10: 2.5rem;
+$padding-12: 3rem;
+$padding-16: 4rem;
+$padding-20: 5rem;
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.padding-top-6 {
+  padding-top: $padding-6;
+}
+
+.padding-top-8 {
+  padding-top: $padding-8;
+}
+
+.padding-top-10 {
+  padding-top: $padding-10;
+}
+
+.padding-bottom-10 {
+  padding-bottom: $padding-10;
+}

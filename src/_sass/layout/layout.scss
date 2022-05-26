@@ -1,0 +1,24 @@
+$padding-page-head: $padding-4;
+
+// container with margin on both sides
+.content {
+  padding: $padding-10 $padding-5;
+  position: relative;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.sticky-top {
+  position: sticky;
+  top: 0;
+}
+
+@include medium {
+  // add .limited to set a maximum body width
+  .limited-large {
+    max-width: $width-large;
+    margin: 0 auto;
+  }
+}

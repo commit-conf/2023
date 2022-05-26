@@ -1,0 +1,22 @@
+{% set text %}
+  <div>
+    <h1>{{2023ThemeTitle}}</h1>
+    <p class="subheader">{{2023ThemeSubtitle}}</p>
+    {{2023ThemeDesc | safe}}
+  </div>
+{% endset %}
+
+{% set video %}
+  {% import "macros/youtube.njk" as youtube %}
+  <div class="youtube-player-container text-center">
+    {{ youtube.render(id="-ACLrI0a1ok", title=2019VideoSummary, ariaLabel=2019VideoSummaryDesc)}}
+  </div>
+{% endset %}
+
+
+<section class="content padding-top-10 padding-bottom-10">
+
+{% import "macros/columns.njk" as columns %}
+{{ columns.render([{html: text}, {html: video}]) }}
+
+</section>

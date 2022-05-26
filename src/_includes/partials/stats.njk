@@ -1,0 +1,22 @@
+{% set stats = [
+  {
+    name: talks,
+    value: 140
+  },
+  {
+    name: attendees,
+    value: "2,000" if locale == 'en' else "2.000"
+  },
+  {
+    name: communities,
+    value: 49
+  }
+]%}
+<div class="stats">
+  {% for stat in stats %}
+    <div class="stat">
+      <div class="stat-value">{{ stat.value }}</div>
+      <div class="stat-name">{{ stat.name }}</div>
+    </div>
+  {% endfor %}
+</div>

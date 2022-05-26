@@ -1,0 +1,16 @@
+<section class="background-1 border-top border-bottom">
+   <div class="limited-large content" >
+  <h1>{{DiversityTitle}}</h1>
+  <p>{{DiversitySubtitle}}</p>
+  {% set techsessions %}
+    <h2>Tech SHEssions</h2>
+    <p>{{TechSessionsDesc | safe}}</p>
+  {% endset %}
+  {% set diversityTickets %}
+    <h2>{{DiversityTickets}}</h2>
+    {{DiversityTicketsDesc | safe}}
+  {% endset %}
+  {% import "macros/columns.njk" as columns %}
+  {{ columns.render([{html: techsessions}, {html: diversityTickets}]) }}
+  </div>
+</section>

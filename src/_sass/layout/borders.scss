@@ -1,0 +1,30 @@
+// border-radius
+// see https://tailwindcss.com/docs/border-radius
+$border-radius-none: 0;
+$border-radius-s: 0.125rem;
+$border-radius: 0.25rem;
+$border-radius-m: 0.375rem;
+$border-radius-l: 0.5rem;
+$border-radius-full: 9999px;
+
+// border-width
+// see https://tailwindcss.com/docs/border-width
+$border-none: 0;
+$border-width-1: 1px;
+$border-width-2: 2px;
+$border-width-3: 3px;
+$border-width-4: 4px;
+$border-width-8: 8px;
+
+.border-top {
+  border-top: $border-width-1 solid $color-border;
+}
+.border-bottom {
+  border-bottom: $border-width-1 solid $color-border;
+}
+.border {
+  border: $border-width-1 solid $color-border;
+}
+.border-radius {
+  border-radius: $border-radius;
+}

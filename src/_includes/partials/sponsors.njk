@@ -1,0 +1,72 @@
+<div class="limited-large content border-top">
+  {% if site.sponsors | length != 0 %}
+  <div class="border-bottom padding-bottom-10">
+    <h1>{{OurSponsors}}</h1>
+    {% import "macros/collaborator-logo.njk" as logo %}
+    {% for category in sponsors %}
+    <div class="flex-row flex-wrap gap-1 margin-bottom {{'padding-top-10' if loop.index0 === 0}} sponsors {{category.name | slugify}}">
+      {% for sponsor in category.items %}
+      <div class="cateogry-wrapper flex-column">
+        <span class="category">{{category.name}}</span>
+        {{ logo.render(sponsor, 'sponsors', 'flex-row items-center justify-center sponsor') }}
+        </div>
+      {% endfor %}
+    </div>
+    {% endfor %}
+    </div>
+  {% endif %}
+  <h1 class="padding-top-10">{{AreYouInterested}}</h1>
+  {% 
+    set stats = [{
+      name: attendees,
+      value: "+2,000" if locale == 'en' else "+2.000"
+    }, {
+      name: speakers,
+      value: 170
+    }, {
+      name: tracks,
+      value: 12
+    }, {
+      name: sessions,
+      value: '+500'
+    }, {
+      name: recordedTalks,
+      value: 140
+    }, {
+      name: engineers,
+      value: '70%'
+    }, {
+      name: followers,
+      value: "+9,100" if locale == 'en' else "+9.100"
+    }, {
+      name: tweetsPerEdition,
+      value: "+6,000" if locale == 'en' else "+6.000"
+    }, {
+      name: photosPerEdition,
+      value: "+1,500" if locale == 'en' else "+1.500"
+    }, {
+      name: impressionsPerEdition,
+      value: "+8MM"
+    }, {
+      name: youtubeVisualizations,
+      value: "+76k"
+    }, {
+      name: youtubeSubscribers,
+      value: "+4,800" if locale == 'en' else "+4.800"
+    }]
+  %}
+  <div class="grid autofill-120 padding-top-10 text-center items-start">
+    {% for stat in stats %}
+    <div class="stat flex-column">
+      <div class="stat-value">{{stat.value}}</div>
+      <div>{{stat.name}}</div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% include "partials/graphics.njk" %}
+<section class="limited-large content">
+  <h2>{{GetInvolved}}</h2>
+  {{GetInvolvedDesc | safe}}
+  <a class="button primary margin-top" href="mailto:info@commit-conf.com">{{GetInContact}}</a>
+</section>

@@ -1,0 +1,21 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  --grid-gap: 2rem;
+  gap: var(--grid-gap);
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+
+.gap-2 {
+  gap: 1.5rem;
+}
+
+.autofill-120 {
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+}
+.autofill-140 {
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+}
