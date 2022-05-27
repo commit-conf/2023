@@ -1,8 +1,8 @@
 .hero {
   --hero-button-padding: #{$padding-1} #{$padding-3};
   --hero-button-font-size: #{$font-size-l};
-  --hero-title-size: #{$font-size-3xl};
-  --hero-subtitle-size: #{$font-size-xl};
+  --hero-title-size: #{$font-size-4xl};
+  --hero-subtitle-size: #{$font-size-2xl};
   --hero-min-height: 400px;
   justify-content: center;
   align-items: center;
@@ -38,16 +38,17 @@
 
 .stats {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
   background-color: $color-teal-200;
   padding: $padding-4 $padding-0;
-  gap: $padding-3;
+  gap: $gap-3;
 }
 
 .stat {
   display: flex;
-  gap: $padding-2;
+  gap: $gap-2;
   align-items: center;
   --stat-name-size: #{$font-size-xl};
   --stat-value-size: #{$font-size-2xl};
@@ -62,7 +63,7 @@
 
 .dejavu-videos {
   display: grid;
-  gap: $padding-4;
+  gap: $gap-4;
   grid-auto-rows: 1fr;
   justify-content: center;
   grid-template-columns: repeat(2, minmax(50%, 560px));
@@ -102,7 +103,7 @@
 
 .collaborator-logo {
   max-width: 100%;
-  max-height: 60px;
+  max-height: 3.75rem;
 }
 
 .sponsors {

@@ -1,21 +1,30 @@
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
   --grid-gap: 2rem;
   gap: var(--grid-gap);
 }
 
+$gap-0: 0;
+$gap-1: 0.25rem;
+$gap-2: 0.5rem;
+$gap-3: 0.75rem;
+$gap-4: 1rem;
+$gap-5: 1.25rem;
+$gap-6: 1.5rem;
+$gap-8: 2rem;
+
 .gap-1 {
-  gap: 1rem;
+  gap: $gap-4;
 }
 
 .gap-2 {
-  gap: 1.5rem;
+  gap: $gap-6;
 }
 
 .autofill-120 {
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(7.5rem, 1fr));
 }
 .autofill-140 {
-  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(8.75rem, 1fr));
 }

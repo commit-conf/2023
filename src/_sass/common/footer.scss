@@ -11,6 +11,7 @@ footer {
   // margin-top: $footer-padding;
   background: $color-footer-bg;
   width: 100%;
+  color: $color-footer-link;
 }
 
 .footer-row {
@@ -58,8 +59,8 @@ footer {
 }
 
 .extrema {
-  width: 86px;
-  height: 15px;
+  width: 143px;
+  height: 25px;
   display: inline-block;
   text-indent: -100000px;
   overflow: hidden;
