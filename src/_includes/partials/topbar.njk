@@ -34,8 +34,8 @@
     <li>
       <ul class="flex-row items-center no-margin unstyled topbar-full" role="menu" aria-hidden="false">
         {% for navigationItem in navigationItems %}
-          <li> 
-              <a href="{{ navigationItem.url }}" class="topbar-link" role="menuitem" tabindex="{{loop.index0}}">
+          <li role="none"> 
+              <a href="{{ navigationItem.url }}" class="topbar-link" role="menuitem" tabindex="0">
                 {{ navigationItem.name }}
               </a>
           </li>
@@ -48,7 +48,7 @@
         <ul class="topbar-dropdown-content unstyled">
           {% for navigationItem in navigationItems %}
             <li> 
-                <a href="{{ navigationItem.url }}" class="topbar-link" role="menuitem" tabindex="{{loop.index0}}">
+                <a href="{{ navigationItem.url }}" class="topbar-link" tabindex="0">
                   {{ navigationItem.name }}
                 </a>
             </li>
