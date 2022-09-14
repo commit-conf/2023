@@ -53,8 +53,7 @@ h2,
 h3,
 h4,
 h5,
-h6,
-.subheader {
+h6 {
   color: $color-body-fg;
   font-family: var(--header-font);
   font-weight: 900;
@@ -92,10 +91,9 @@ h6 {
 }
 // .subheader is to be used under H1 to indicate additional context
 .subheader {
-  font-size: $font-size-2xl;
-  font-family: var(--body-font);
   color: $color-teal-800;
-  margin: $margin-4 0;
+  line-height: $line-height-snug;
+  //margin: $margin-4 0;
 }
 
 hr {
@@ -146,8 +144,15 @@ pre {
   color: $color-black;
   font-family: var(--mono-font);
   font-size: $font-size-m;
-  padding: 2px 5px 1px;
   overflow: auto;
+}
+
+code {
+  padding: 2px 5px 1px;
+}
+
+pre {
+  padding: 5px 10px;
 }
 
 .inline {

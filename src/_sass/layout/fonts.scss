@@ -67,7 +67,7 @@ $font-size-7xl: 5rem;
 // small font, will use gray color
 small,
 .small {
-  font-size: $font-size-m; // one less than body default
+  font-size: $font-size-l; // one less than body default
   line-height: inherit;
   color: $color-gray-700;
   font-weight: bold;

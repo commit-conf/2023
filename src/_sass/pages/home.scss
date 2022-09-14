@@ -69,7 +69,6 @@
   flex-direction: column;
   align-items: center;
   background-color: $color-teal-700;
-  background: linear-gradient($color-teal-700, $color-teal-800);
   color: $color-white;
   text-shadow: 2px 2px 0 $color-teal-900;
   border-top: 1px solid $color-teal-600;
@@ -81,16 +80,20 @@
 
 .stat {
   display: flex;
-  gap: $gap-2;
   align-items: center;
-  --stat-name-size: #{$font-size-xl};
-  --stat-value-size: #{$font-size-2xl};
-  > .stat-name {
-    font-size: var(--stat-name-size);
+  --stat-label-size: #{$font-size-xl};
+  --stat-value-size: #{$font-size-3xl};
+  > .stat-label {
+    font-size: var(--stat-label-size);
+    text-transform: uppercase;
+    line-height: $line-height-snug;
+    color: $color-gray-600;
+    font-weight: bold;
   }
   > .stat-value {
     font-size: var(--stat-value-size);
     font-weight: bold;
+    line-height: $line-height-snug;
   }
 }
 
@@ -197,13 +200,12 @@
   }
 
   .stat {
-    --stat-name-size: #{$font-size-3xl};
+    --stat-label-size: #{$font-size-2xl};
     --stat-value-size: #{$font-size-4xl};
   }
 
   .dejavu-videos {
     grid-template-columns: repeat(4, 25%);
-
     margin: $margin-4 $margin-6;
   }
 

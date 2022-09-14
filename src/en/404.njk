@@ -5,15 +5,18 @@ permalink: 404.html
 {% extends "layouts/base.njk" %} 
 {% block content %} 
   <section class="content limited-large">
-  <h1 class="lead">Page not found</h1>
-  <p class="font-highlight font-size-2xl">
+  <h1 class="text-center">Page not found</h1>
+  <p class="text-center">
     Sorry, but we could not find the page that you are looking for.
     <a href="/">Go to the homepage</a>.
   </p>
-  <p class="text-center padding-top-10 padding-bottom-10">
-    <img src="/img/404.jpg" class="medium-width-70 large-width-50 border-radius">
-  </p>
+  <div class="text-center margin">
+    <img src="/img/404.jpg" class="medium-width-70 large-width-50 border-radius" style=" margin: 3rem 0">
+  </div>
   
+  <div style="  
+    display: flex;
+    justify-content: center;">
   <div class="random-entry">
     <p>
       In the meantime, this is how you write a Hello World for Java:
@@ -184,6 +187,9 @@ main = putStrLn "Hello, World!"</pre>
     <pre>fn main() {
   println!("Hello, world!");
 }</pre>
+  </div>
+
+
   </div>
   
 </section>

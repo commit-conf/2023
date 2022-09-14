@@ -1,21 +1,23 @@
-<div class="limited-large content border-top">
-  {% if site.sponsors | length != 0 %}
-  <div class="border-bottom padding-bottom-10">
+{% if site.sponsors | length != 0 %}
+  <section class="limited-large content">
     <h1>{{OurSponsors}}</h1>
     {% import "macros/collaborator-logo.njk" as logo %}
     {% for category in sponsors %}
-    <div class="flex-row flex-wrap gap-1 margin-bottom {{'padding-top-10' if loop.index0 === 0}} sponsors {{category.name | slugify}}">
-      {% for sponsor in category.items %}
-      <div class="cateogry-wrapper flex-column">
-        <span class="category">{{category.name}}</span>
-        {{ logo.render(sponsor, 'sponsors', 'flex-row items-center justify-center sponsor') }}
-        </div>
-      {% endfor %}
-    </div>
+      <div class="flex-row flex-wrap gap-1 margin-bottom {{'padding-top-10' if loop.index0 === 0}} sponsors {{category.name | slugify}}">
+        {% for sponsor in category.items %}
+          <div class="cateogry-wrapper flex-column">
+            <span class="category">{{category.name}}</span>
+            {{ logo.render(sponsor, 'sponsors', 'flex-row items-center justify-center sponsor') }}
+          </div>
+        {% endfor %}
+      </div>
     {% endfor %}
-    </div>
-  {% endif %}
-  <h1 class="padding-top-10">{{AreYouInterested}}</h1>
+  </section>
+{% endif %}
+
+<section class="limited-large content">
+  <h1>{{GetInvolved}}</h1>
+  {{GetInvolvedDesc | safe}}
   {% 
     set stats = [{
       name: attendees,
@@ -59,14 +61,17 @@
     {% for stat in stats %}
     <div class="stat flex-column">
       <div class="stat-value">{{stat.value}}</div>
-      <div>{{stat.name}}</div>
+      <div class="stat-label">{{stat.name}}</div>
     </div>
     {% endfor %}
   </div>
-</div>
-{% include "partials/graphics.njk" %}
+</section>
+
 <section class="limited-large content">
-  <h2>{{GetInvolved}}</h2>
-  {{GetInvolvedDesc | safe}}
+  {% include "partials/graphics.njk" %}
+</section>
+
+<section class="limited-large content">
+  {{GetInvolvedBulletPoints | safe}}
   <a class="button primary margin-top" href="mailto:info@commit-conf.com">{{GetInContact}}</a>
 </section>
