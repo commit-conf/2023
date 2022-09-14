@@ -9,11 +9,17 @@
   <meta itemprop="url" content="https://goo.gl/maps/X5eoF">
 </div>
 <div class="hero content flex-row items-center">
+  <picture aria-hidden class="hero-image">
+    <source srcset="/img/hero-large.avif" type="image/avif">
+    <source srcset="/img/hero-large.jpg">
+    <img src="/img/hero-large.jpg" alt="" />
+  </picture>
   <div class="hero-text flex-grow flex-column items-center">
     <h1 class="hero-title no-margin uppercase" itemprop="name">
-      Commit <span class="font-highlight">Conf</span>
+      Commit <span class="highlight">Conf</span>
     </h1>
-    <p class="hero-subtitle uppercase">Madrid, 21-22 Abr</p>
+    <p class="hero-subtitle uppercase">{{LocationAndDate}}</p>
+    <p class="hero-description text-center" itemprop="description">{{TitleDesc}}</p>
     {# 
       <div class="hero-actions flex-row flex-wrap items-center justify-center">
         <a href="{{site.c4pURL}}" class="button primary uppercase">

@@ -15,6 +15,14 @@ $padding-page-head: $padding-4;
   top: 0;
 }
 
+.section-center {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 @include medium {
   // add .limited to set a maximum body width
   .limited-large {
