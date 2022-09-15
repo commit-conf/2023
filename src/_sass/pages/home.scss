@@ -81,6 +81,7 @@
 .stat {
   display: flex;
   align-items: center;
+  gap: $gap-2;
   --stat-label-size: #{$font-size-xl};
   --stat-value-size: #{$font-size-3xl};
   > .stat-label {
@@ -89,6 +90,9 @@
     line-height: $line-height-snug;
     color: $color-gray-600;
     font-weight: bold;
+    &.light {
+      color: $color-white;
+    }
   }
   > .stat-value {
     font-size: var(--stat-value-size);

@@ -1,6 +1,6 @@
 <section class="limited-large content">
   <h1>{{Tickets}}</h1>
-  <p>{{TicketsSellingMessage}}</p>
+  <p>{{TicketsSellingMessage | safe}}</p>
   {% macro renderSection(title, contents) %}
     <section class="padding-top-6">
       <h2>{{title}}</h2>
