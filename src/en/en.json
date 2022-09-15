@@ -127,5 +127,15 @@
   "ChangeTicketDataOrRequestTransfer": "You can transfer your ticket to someone else by introducing their data on the ticket page or contacting the organization to do the transfer on your behalf.",
   "TransferedTicketsResponsability": "The organization is not responsible for any transferred tickets. It will validate your ticket in the Registration Point, and it will reject it if someone else has presented it.",
   "WristbandRequirement": "With your ticket, you will receive a badge and a bracelet at the registration desk. You must wear the bracelet always visible, or you will not be able to attend any talk or lab.",
-  "RightToModifyTheTerms": "The organization reserves the right to modify these Terms and Conditions at any time and without prior notice."
+  "RightToModifyTheTerms": "The organization reserves the right to modify these Terms and Conditions at any time and without prior notice.",
+
+  "PrivacyPolicyIntro": "<p>We collect information to provide better services. This page explains what information we collect and why we collect it.</p>",
+  "WhatWeCollect": "Information that we collect",
+  "WhatWeCollectDesc": "<p>We use cookies to aggregate user visits (using Google Analytics) to help us improve our service. You may configure your browser to block cookies from our website.</p>",
+  "ThirdParties": "Sharing with third parties",
+  "ThirdPartiesDesc": "<p>We do not share personal information with third parties unless for legal reasons, if reasonably necessary to:</p><ul><li>Meet any applicable law or legal process.<li>Enforce applicable Terms of Service, including investigation of potential violations.<li>Protect against harm our users or the public as required or permitted by law.</ul>",
+  "Security": "Security",
+  "SecurityDesc": "<p>We work to protect your data from unauthorized access by encrypting our services using SSL.</p>",
+  "Changes": "Changes",
+  "ChangesDesc": "<p>Our Privacy Policy may change. We will post any privacy policy changes on this page and, if the changes are significant, we will provide a more prominent notice (including, for certain services, email notification of privacy policy changes).</p>"
 }

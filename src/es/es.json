@@ -127,5 +127,14 @@
   "ChangeTicketDataOrRequestTransfer": "Puedes ceder tu entrada a otra persona introduciendo sus datos en la página de la entrada o entrando en contacto con la organización para hacer la transferencia por ti.",
   "TransferedTicketsResponsability": "La organización no se hace responsable de entradas transferidas a otro usuario. Tu entrada se validará en el registro y será rechazada si ha sido presentada por otra persona con anterioridad.",
   "WristbandRequirement": "Presentando tu entrada recibirás un badge y una pulsera en el registro. Tienes que llevar la pulsera siempre puesta y visible, o no podrás acceder a las charlas y talleres.",
-  "RightToModifyTheTerms": "La organización se reserva el derecho a modificar estos Términos y Condiciones en cualquier momento y sin necesidad de previo aviso."
+  "RightToModifyTheTerms": "La organización se reserva el derecho a modificar estos Términos y Condiciones en cualquier momento y sin necesidad de previo aviso.",
+  "PrivacyPolicyIntro": "<p>Recopilamos información para mejorar nuestros servicios. Esta página explica qué información recogemos y para qué.</p>",
+  "WhatWeCollect": "Información que recopilamos",
+  "WhatWeCollectDesc": "<p>Usamos cookies para recoger información de las visitas de los usuarios (usando Google Analytics) para ayudarnos a mejorar nuestro servicio. Puedes configurar tu navegador para bloquear las cookies de nuestra página web.</p>",
+  "ThirdParties": "Compartir con terceras partes",
+  "ThirdPartiesDesc": "<p>Nosotros <b>no compartimos información</b> con terceras partes salvo por razones legales, si es razonablemente necesaria para:</p><ul><li>Cualquier ley aplicable o proceso legal.<li>Asegurar la aplicación de los términos del servicio, incluyendo la investigación de posibles incumplimientos.<li>Proteger contra daños a nuestros usuarios o al público según lo exija o lo permita la ley.</ul>",
+  "Security": "Seguridad",
+  "SecurityDesc": "<p>La seguridad de tus datos es importante para nosotros. Para evitar el acceso no autorizado o la divulgación de información, encriptamos nuestras comunicaciones con SSL.</p>",
+  "Changes": "Cambios",
+  "ChangesDesc": "<p>Podemos modificar esta política de privacidad en cualquier momento. Si hacemos cambios significativos, te avisaremos por correo electrónico o mediante un aviso destacado en nuestro sitio web.</p>"
 }
