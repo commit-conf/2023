@@ -132,3 +132,10 @@ To add a community, you need to:
   ... // other communities
 ]
 ```
+
+## CICD
+
+CICD depends on Github Actions. It depends on a Github repository secret with the name GH_PAGES_TOKEN. We have two workflows:
+
+1. [Build](/.github/workflows/build.yml): It runs on every push to the master branch. It will build the website and deploy it to the `gh-pages` branch.
+2. [Optimize images](/.github/workflows/optimize-images.yml): It runs on every push to the master branch. It will optimize the images in the `static/img` folder and commit the changes to the master branch.
