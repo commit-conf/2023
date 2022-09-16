@@ -75,8 +75,12 @@ function optimizeFolderImages({ sourceDir, size }) {
     });
   });
 }
-fs.rmSync("static/img/communities/optimized", { recursive: true });
-fs.rmSync("static/img/sponsors/optimized", { recursive: true });
+if (fs.existsSync("static/img/communities/optimized")) {
+  fs.rmSync("static/img/communities/optimized", { recursive: true });
+}
+if (fs.existsSync("static/img/sponsors/optimized")) {
+  fs.rmSync("static/img/sponsors/optimized", { recursive: true });
+}
 fs.mkdirSync("static/img/communities/optimized");
 fs.mkdirSync("static/img/sponsors/optimized");
 Promise.all([
