@@ -12,6 +12,7 @@ on:
       - "src/**"
       - ".eleventy.js"
       - ".github/**"
+      - "bin/**"
 
 jobs:
   build:
