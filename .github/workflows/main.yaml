@@ -36,7 +36,7 @@ jobs:
       - run: npm run build
       - name: Configure CI credentials
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_PAGES_TOKEN: ${{ secrets.GH_PAGES_TOKEN }}
         run: ./bin/configure-ci
       - name: deploy
         run: ./bin/deploy
