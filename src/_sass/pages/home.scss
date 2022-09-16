@@ -53,7 +53,7 @@
   font-size: calc(var(--hero-subtitle-size) * 0.75);
   color: $color-white;
   text-shadow: 1px 1px 0 black;
-  width: max(400px, 50%);
+  max-width: max(400px, 50%);
 }
 
 .hero-actions {

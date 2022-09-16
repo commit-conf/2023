@@ -63,6 +63,9 @@
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.video-img {
   filter: brightness(0.6);
   transition: filter $transition-duration-1 ease-out;
 }
