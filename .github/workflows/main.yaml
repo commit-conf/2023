@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # you must check out the repository
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       # setup node
       - uses: actions/setup-node@v1
         with:
@@ -36,7 +36,7 @@ jobs:
       - run: npm run build
       - name: Configure CI credentials
         env:
-          GH_PAGES_TOKEN: ${{ secrets.GH_PAGES_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: ./bin/configure-ci
       - name: deploy
         run: ./bin/deploy
