@@ -70,24 +70,42 @@ h6 {
 }
 
 h1 {
-  font-size: $font-size-5xl;
+  font-size: $font-size-4xl;
+  @include medium {
+    font-size: $font-size-5xl;
+  }
   margin-bottom: $margin-3;
 }
 h2 {
-  font-size: $font-size-4xl;
+  font-size: $font-size-3xl;
+  @include medium {
+    font-size: $font-size-4xl;
+  }
 }
 h3 {
-  font-size: $font-size-3xl;
+  font-size: $font-size-2xl;
+  @include medium {
+    font-size: $font-size-3xl;
+  }
 }
 h4 {
-  font-size: $font-size-2xl;
+  font-size: $font-size-xl;
+  @include medium {
+    font-size: $font-size-2xl;
+  }
 }
 h5 {
-  font-size: $font-size-xl;
+  font-size: $font-size-l;
+  @include medium {
+    font-size: $font-size-xl;
+  }
   margin-bottom: $margin-2;
 }
 h6 {
-  font-size: $font-size-l;
+  font-size: $font-size-m;
+  @include medium {
+    font-size: $font-size-l;
+  }
 }
 // .subheader is to be used under H1 to indicate additional context
 .subheader {
