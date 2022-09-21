@@ -106,7 +106,7 @@
   gap: $gap-4;
   grid-auto-rows: 1fr;
   justify-content: center;
-  grid-template-columns: repeat(2, minmax(50%, 560px));
+  grid-template-columns: repeat(2, minmax(45%, 560px));
   align-self: stretch;
   margin: $margin-4 0;
 }
