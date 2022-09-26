@@ -37,7 +37,7 @@ jobs:
       # BUG: action will not launch another actions if we used the default checkout token
       - name: Configure CI credentials
         env:
-          GH_PAGES_DEPLOY_KEY: ${{ secrets.GH_PAGES_DEPLOY_KEY }}
+          CI_DEPLOY_KEY: ${{ secrets.CI_DEPLOY_KEY }}
         run: ./bin/configure-ci
       - name: commit
         run: |
