@@ -9,6 +9,14 @@ npm i
 
 ```
 
+## Start local server
+
+```bash
+
+npm run watch
+
+```
+
 ## Folder structure
 
 This project has the following basic structure
