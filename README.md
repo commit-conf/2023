@@ -17,6 +17,14 @@ npm run watch
 
 ```
 
+## Deploy
+
+```bash
+npm run build
+
+bin/deploy
+```
+
 ## Folder structure
 
 This project has the following basic structure
