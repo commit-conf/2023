@@ -46,7 +46,7 @@ module.exports = [
   },
   {
     name: "DotNetters",
-    href: "http://dotnetters.es",
+    href: "https://www.meetup.com/es-ES/dotnetters",
   },
   {
     name: "Facebook Developer Circle Madrid",
