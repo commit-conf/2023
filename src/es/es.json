@@ -95,7 +95,7 @@
   "NeedLaptopDesc": "<p>Si piensas asistir a un taller, probablemente lo necesitarás. En todo caso, podría ser útil para tomar apuntes o revisar las transparencias del ponente durante alguna charla. En los talleres hay enchufes para cargar tu portátil, pero no en las charlas.</p>",
   "WorkshopRequirements": "¿Qué necesito para asistir a un taller?",
   "WorkshopRequirementsDesc": "<p>Cada ponente indica en su sesión de la agenda los requisitos para asistir a su workshop: portátil, tener instalado algún programa, experiencia previa, etc.</p>",
-  "TicketsSellingMessage": "La venta de entradas empieza el 21 de noviembre en <a href=\"https://koliseo.com/events/commit-2023/tickets\">Koliseo</a>. Las siguientes son las preguntas más frecuentes.",
+  "TicketsSellingMessage": "Las entradas están disponibles en <a href=\"https://koliseo.com/events/commit-2023/tickets\">Koliseo</a>. Las siguientes son las preguntas más frecuentes.",
   "INeedInvoice": "Necesito factura",
   "HowToGetYourInvoice": "<p>Puedes crear tu factura haciendo clic en el botón \"Crear factura\" que aparece en tu entrada en <a target=\"_blank\" href=\"https://koliseo.com\">Koliseo</a>. Puedes generar tu factura hasta 30 días después del evento.</p>",
   "TransferTicket": "Quiero ceder o cambiar algún dato de mi entrada",
