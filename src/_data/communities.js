@@ -176,6 +176,11 @@ module.exports = [
     svg: "true",
   },
   {
+    name: "PyData Madrid",
+    href: "https://meetup.com/PyData-Madrid/",
+    svg: "true"
+  },
+  {
     name: "Rioja{dotnet}",
     href: "http://www.riojadotnet.com/",
   },
