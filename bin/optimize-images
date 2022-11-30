@@ -82,7 +82,7 @@ if (fs.existsSync("static/img/sponsors/optimized")) {
   fs.rmSync("static/img/sponsors/optimized", { recursive: true });
 }
 fs.mkdirSync("static/img/communities/optimized");
-fs.mkdirSync("static/img/sponsors/optimized");
+fs.mkdirSync("static/img/sponsors/optimized", {recursive: true});
 Promise.all([
   optimizeFolderImages({
     sourceDir: "static/img/communities",
