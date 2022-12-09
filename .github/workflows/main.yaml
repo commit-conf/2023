@@ -22,7 +22,7 @@ jobs:
       # setup node
       - uses: actions/setup-node@v1
         with:
-          node-version: 12
+          node-version: 16
       # add npm cache
       - uses: actions/cache@v1
         with:
