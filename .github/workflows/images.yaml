@@ -39,8 +39,9 @@ jobs:
         env:
           CI_DEPLOY_KEY: ${{ secrets.CI_DEPLOY_KEY }}
         run: ./bin/configure-ci
+      # https://stackoverflow.com/questions/8123674/how-to-git-commit-nothing-without-an-error
       - name: commit
         run: |
           git add -A
-          git commit -m "CI - Images optimization"
+          git diff-index --quiet HEAD || git commit -m "CI - Images optimization"
           git push
