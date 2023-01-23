@@ -2,21 +2,19 @@
 
 set -e
 
-FOLDER=.gh-pages
+FOLDER=../.gh-pages
 echo "Current folder: $(pwd)"
 if [ ! -d ${FOLDER} ]; then
   # this can olny be on a local environment, not on CICD
-  echo "Warning: ${FOLDER} does not exist. Creating it..."
-  git clone -b gh-pages git@github.com:commit-conf/2023 ${FOLDER}
-  cd ${FOLDER}
-else
-  cd ${FOLDER}
-  git pull origin gh-pages
+  echo "Warning: ${FOLDER} does not exist. Are you on CICD?"
+  exit 1
 fi
 
+cd ${FOLDER}
+echo "Current folder: $(pwd)"
 rm -rf *
 rm -rf .github
-cp -R ../_site/* .
+cp -R ../2023/_site/* .
 git add -A
 git commit -m "$(git log origin/master -1 --pretty=%B)"
 git push
