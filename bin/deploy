@@ -2,24 +2,24 @@
 
 set -e
 
-# use a hidden folder, so we do not delete it later
 FOLDER=.gh-pages
-
-# if the folder exists, delete it
-if [ -d ${FOLDER} ]; then
-  rm -rf ${FOLDER}
+echo "Current folder: $(pwd)"
+if [ ! -d ${FOLDER} ]; then
+  # this can olny be on a local environment, not on CICD
+  echo "Warning: ${FOLDER} does not exist. Creating it..."
+  git clone -b gh-pages git@github.com:commit-conf/2023 ${FOLDER}
+  cd ${FOLDER}
+else
+  cd ${FOLDER}
+  git pull origin gh-pages
 fi
 
-mkdir ${FOLDER}
-cp -r _site/* ${FOLDER}/
-git checkout -b gh-pages
-git pull origin gh-pages
 rm -rf *
-mv ${FOLDER}/* .
-
+rm -rf .github
+cp -R ../_site/* .
 git add -A
 git commit -m "$(git log origin/master -1 --pretty=%B)"
-git push origin gh-pages
+git push
 
 cd ..
 echo "Successfully deployed" 

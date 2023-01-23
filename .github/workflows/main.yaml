@@ -18,9 +18,16 @@ jobs:
   build:
     name: Build & deploy website
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       # you must check out the repository
-      - uses: actions/checkout@v3
+      - name: Checkout master branch
+        uses: actions/checkout@v3
+      - name: Checkout gh-pages branch on subfolder
+        uses: actions/checkout@v3
+        with:
+          path: .gh-pages
       # setup node
       - uses: actions/setup-node@v1
         with:
