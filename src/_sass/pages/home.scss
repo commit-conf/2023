@@ -171,6 +171,11 @@
   }
 }
 
+.diamond {
+  --sponsor-logo-size: 160px;
+  --sponsor-color: #{$color-pink-800};
+}
+
 .platinum {
   --sponsor-logo-size: 140px;
   --sponsor-color: #{$color-teal-800};
