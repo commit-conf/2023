@@ -7,7 +7,7 @@
       {% endfor %}
     {% endfor %}
   {% if site.sponsors | length != 0 %}
-    <div class="grid autofill-120 items-center padding-bottom-10 padding-top-10 text-center">
+    <div class="wide grid autofill-120 items-center padding-bottom-10 padding-top-10 text-center">
     {% import "macros/collaborator-logo.njk" as logo %}
     {% for sponsor in sponsors %}
       {{ logo.renderSponsor(sponsor) }}
