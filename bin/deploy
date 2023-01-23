@@ -13,6 +13,7 @@ fi
 mkdir ${FOLDER}
 cp -r _site/* ${FOLDER}/
 git checkout -b gh-pages
+git pull origin gh-pages
 rm -rf *
 mv ${FOLDER}/* .
 
