@@ -2,7 +2,7 @@
 
 set -e
 
-FOLDER=../.gh-pages
+FOLDER=.gh-pages
 echo "Current folder: $(pwd)"
 if [ ! -d ${FOLDER} ]; then
   # this can olny be on a local environment, not on CICD
@@ -14,7 +14,7 @@ cd ${FOLDER}
 echo "Current folder: $(pwd)"
 rm -rf *
 rm -rf .github
-cp -R ../2023/_site/* .
+cp -R ../_site/* .
 git add -A
 git commit -m "$(git log origin/master -1 --pretty=%B)"
 git push

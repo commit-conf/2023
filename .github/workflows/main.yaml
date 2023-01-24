@@ -27,6 +27,7 @@ jobs:
       - name: Checkout gh-pages branch on subfolder
         uses: actions/checkout@v3
         with:
+          ref: gh-pages
           path: .gh-pages
       # setup node
       - uses: actions/setup-node@v1
@@ -44,8 +45,6 @@ jobs:
       # compile
       - run: npm run build
       - name: Configure CI credentials
-        env:
-          CI_DEPLOY_KEY: ${{ secrets.CI_DEPLOY_KEY }}
         run: ./bin/configure-ci
       - name: deploy
         run: ./bin/deploy
