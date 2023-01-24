@@ -10,13 +10,16 @@ if [ ! -d ${FOLDER} ]; then
   exit 1
 fi
 
+# get the last commit message from the master branch
+COMMIT_MESSAGE=$(git log origin/master -1 --pretty=%B)
+
 cd ${FOLDER}
 echo "Current folder: $(pwd)"
 rm -rf *
 rm -rf .github
 cp -R ../_site/* .
 git add -A
-git commit -m "$(git log origin/master -1 --pretty=%B)"
+git commit -m "${COMMIT_MESSAGE}"
 git push origin gh-pages
 
 cd ..
