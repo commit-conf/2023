@@ -1,0 +1,186 @@
+// Default body styles
+body {
+  color: $color-body-fg;
+  background-color: $color-body-bg;
+  font-family: var(--body-font);
+  line-height: $line-height-normal;
+  font-size: $font-size-xl;
+  margin: 0;
+  padding: 0;
+
+  // --- Font families ---
+  // Extracted from https://tailwindcss.com/docs/font-family
+  --body-font: "Lato", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --header-font: "Inter", var(--body-font);
+  --mono-font: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
+    monospace;
+}
+
+img {
+  // Grid Defaults to get images and embeds to work properly
+  max-width: 100%;
+  height: auto;
+
+  // Get rid of gap under images by making them display: inline-block; by default
+  display: inline-block;
+  vertical-align: middle;
+}
+
+a {
+  cursor: pointer;
+  color: $color-link;
+  text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    color: $color-link-hover;
+  }
+
+  & > img {
+    border: none;
+  }
+}
+
+p {
+  margin: 0 0 $margin-6 0;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $color-body-fg;
+  font-family: var(--header-font);
+  font-weight: 900;
+  line-height: $line-height-tight;
+  margin-bottom: $margin-2;
+  margin-top: $margin-1;
+
+  // link inside a header is black.
+  // We are still leaving a different color when hovering,
+  // and underline for the color blind
+  & > a {
+    color: inherit;
+  }
+}
+
+h1 {
+  font-size: $font-size-4xl;
+  @include medium {
+    font-size: $font-size-5xl;
+  }
+  margin-bottom: $margin-3;
+}
+h2 {
+  font-size: $font-size-3xl;
+  @include medium {
+    font-size: $font-size-4xl;
+  }
+}
+h3 {
+  font-size: $font-size-2xl;
+  @include medium {
+    font-size: $font-size-3xl;
+  }
+}
+h4 {
+  font-size: $font-size-xl;
+  @include medium {
+    font-size: $font-size-2xl;
+  }
+}
+h5 {
+  font-size: $font-size-l;
+  @include medium {
+    font-size: $font-size-xl;
+  }
+  margin-bottom: $margin-2;
+}
+h6 {
+  font-size: $font-size-m;
+  @include medium {
+    font-size: $font-size-l;
+  }
+}
+// .subheader is to be used under H1 to indicate additional context
+.subheader {
+  color: $color-teal-800;
+  line-height: $line-height-snug;
+  //margin: $margin-4 0;
+}
+
+hr {
+  border: solid $color-border;
+  border-width: 1px 0 0;
+  clear: both;
+  height: 1px;
+  margin: $margin-5 0 $margin-5;
+}
+
+// Typography Defaults
+em,
+i {
+  font-style: italic;
+}
+
+strong,
+b {
+  font-weight: bold;
+}
+
+/* Abbreviations */
+abbr,
+acronym {
+  text-transform: uppercase;
+  font-size: $font-size-m;
+  cursor: help;
+}
+abbr {
+  text-transform: none;
+  &[title] {
+    border-bottom: 1px dotted gray-lighter;
+  }
+}
+
+// Blockquotes
+blockquote {
+  margin: 0 0 $margin-4 0;
+  padding: $padding-3 $padding-5 0;
+  border-left: 3px solid $color-link;
+  overflow: hidden;
+}
+
+code,
+pre {
+  background-color: $color-body-bg;
+  border: 1px solid $color-gray-300;
+  color: $color-black;
+  font-family: var(--mono-font);
+  font-size: $font-size-m;
+  overflow: auto;
+}
+
+code {
+  padding: 2px 5px 1px;
+}
+
+pre {
+  padding: 5px 10px;
+}
+
+.inline {
+  display: inline !important;
+}
+
+// remove the outline for mouse users for onfocus, but keep it for keyboard users
+:focus:not(:focus-visible) {
+  outline: none;
+}
+.cursor-pointer {
+  cursor: pointer;
+}

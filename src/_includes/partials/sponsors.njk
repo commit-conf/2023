@@ -1,0 +1,73 @@
+{% if site.sponsors | length != 0 %}
+  <section class="limited-large content">
+    <h1>{{OurSponsors}}</h1>
+    {% import "macros/collaborator-logo.njk" as logo %}
+    {% for category in sponsors %}
+      <div class="flex-row flex-wrap gap-1 margin-bottom {{'padding-top-10' if loop.index0 === 0}} sponsors {{category.name | slugify}}">
+        {% for sponsor in category.items %}
+          <div class="cateogry-wrapper flex-column">
+            <span class="category">{{category.name}}</span>
+            {{ logo.render(sponsor, 'sponsors', 'flex-row items-center justify-center sponsor') }}
+          </div>
+        {% endfor %}
+      </div>
+    {% endfor %}
+  </section>
+{% endif %}
+
+<section class="limited-large content">
+  <h1>{{GetInvolved}}</h1>
+  {{GetInvolvedDesc | safe}}
+  {% 
+    set stats = [{
+      name: attendees,
+      value: "2,000" if locale == 'en' else "2.000"
+    }, {
+      name: speakers,
+      value: 170
+    }, {
+      name: tracks,
+      value: 12
+    }, {
+      name: recordedTalks,
+      value: 140
+    }, {
+      name: engineers,
+      value: '70%'
+    }, {
+      name: followers,
+      value: "+9,100" if locale == 'en' else "+9.100"
+    }, {
+      name: tweetsPerEdition,
+      value: "+6,000" if locale == 'en' else "+6.000"
+    }, {
+      name: impressionsPerEdition,
+      value: "+8MM"
+    }, {
+      name: youtubeVisualizations,
+      value: "+76k"
+    }, {
+      name: youtubeSubscribers,
+      value: "+4,800" if locale == 'en' else "+4.800"
+    }]
+  %}
+  <div class="grid autofill-120 padding-top-10 text-center items-start">
+    {% for stat in stats %}
+    <div class="stat flex-column">
+      <div class="stat-value">{{stat.value}}</div>
+      <div class="stat-label">{{stat.name}}</div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="limited-large content">
+  {% include "partials/graphics.njk" %}
+</section>
+
+<section class="limited-large content">
+  {{GetInvolvedBulletPoints | safe}}
+  <div class="text-center">
+    <a class="button primary margin-top" href="mailto:info@commit-conf.com">{{GetInContact}}</a>
+  </div>
+</section>

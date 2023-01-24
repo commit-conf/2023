@@ -1,0 +1,229 @@
+.hero {
+  --hero-button-padding: #{$padding-1} #{$padding-3};
+  --hero-button-font-size: #{$font-size-l};
+  --hero-title-size: #{$font-size-5xl};
+  --hero-subtitle-size: #{$font-size-3xl};
+  --hero-min-height: 400px;
+  justify-content: center;
+  align-items: center;
+  padding-top: $padding-8;
+  padding-bottom: $padding-8;
+  min-height: var(--hero-min-height);
+  z-index: 1;
+  background-color: $color-teal-200;
+  position: relative;
+}
+
+.hero-image,
+.hero-image img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.8);
+}
+
+.hero-text {
+  z-index: 2;
+}
+
+.hero-title {
+  font-size: var(--hero-title-size);
+
+  color: $color-white;
+  background: $color-black;
+  padding: 0 1rem;
+
+  .highlight {
+    color: $color-teal-300;
+    background-color: transparent;
+  }
+}
+
+.hero-subtitle {
+  font-size: var(--hero-subtitle-size);
+  color: $color-white;
+  margin-top: $margin-2;
+  text-shadow: 1px 1px 0 black;
+}
+
+.hero-description {
+  font-size: calc(var(--hero-subtitle-size) * 0.75);
+  color: $color-white;
+  text-shadow: 1px 1px 0 black;
+  max-width: max(400px, 50%);
+}
+
+.hero-actions {
+  > .button {
+    padding: var(--hero-button-padding);
+    font-size: var(--hero-button-font-size);
+  }
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  background-color: $color-teal-700;
+  color: $color-white;
+  text-shadow: 2px 2px 0 $color-teal-900;
+  border-top: 1px solid $color-teal-600;
+  border-bottom: 1px solid $color-teal-900;
+
+  padding: $padding-4 $padding-0;
+  gap: $gap-3;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  gap: $gap-2;
+  --stat-label-size: #{$font-size-xl};
+  --stat-value-size: #{$font-size-3xl};
+  > .stat-label {
+    font-size: var(--stat-label-size);
+    text-transform: uppercase;
+    line-height: $line-height-snug;
+    color: $color-gray-600;
+    font-weight: bold;
+    &.light {
+      color: $color-white;
+    }
+  }
+  > .stat-value {
+    font-size: var(--stat-value-size);
+    font-weight: bold;
+    line-height: $line-height-snug;
+  }
+}
+
+.dejavu-videos {
+  display: grid;
+  gap: $gap-4;
+  grid-auto-rows: 1fr;
+  justify-content: center;
+  grid-template-columns: repeat(2, minmax(45%, 560px));
+  align-self: stretch;
+  margin: $margin-4 0;
+}
+
+.dejavu-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: $border-width-1 solid $color-border;
+  border-radius: $border-radius;
+  background-color: $color-gray-100;
+  padding: $padding-4;
+  font-size: $font-size-l;
+  max-width: 100%;
+  text-align: center;
+  transition: background-color $transition-duration-1 ease-out;
+  text-decoration: none;
+  &:hover {
+    background-color: $color-gray-200;
+  }
+}
+
+// comment to force github actions to run
+.collaborator {
+  white-space: nowrap;
+  opacity: 0.6;
+  transition: opacity $transition-duration-1 ease-out;
+  filter: grayscale(100%);
+
+  &:hover,
+  &:focus,
+  &:active {
+    filter: none;
+    opacity: 1;
+  }
+}
+
+.collaborator-logo {
+  max-width: 100%;
+  max-height: 3.75rem;
+}
+
+.sponsors {
+  --sponsor-logo-size: 100px;
+  --sponsor-color: #{$color-gray-800};
+  border-color: var(--sponsor-color) !important;
+  .sponsor {
+    height: var(--sponsor-logo-size);
+    width: var(--sponsor-logo-size);
+    padding: $padding-2 $padding-4;
+    border: $border-width-1 solid var(--sponsor-color);
+    border-radius: 0 0 $border-radius $border-radius;
+  }
+  .category {
+    width: var(--sponsor-logo-size);
+    color: $color-white;
+    background-color: var(--sponsor-color);
+    padding: $padding-1 $padding-2;
+    border-radius: $border-radius $border-radius 0 0;
+    font-size: $font-size-s;
+    text-align: center;
+  }
+}
+
+.diamond {
+  --sponsor-logo-size: 160px;
+  --sponsor-color: #{$color-pink-800};
+}
+
+.platinum {
+  --sponsor-logo-size: 140px;
+  --sponsor-color: #{$color-teal-800};
+}
+
+.gold {
+  --sponsor-logo-size: 120px;
+  --sponsor-color: #{$color-blue-800};
+}
+
+.silver {
+  --sponsor-color: #{$color-red-800};
+}
+
+.bronze {
+  --sponsor-color: #{$color-orange-800};
+}
+
+@include medium {
+  .hero {
+    --hero-button-padding: #{$padding-2} #{$padding-4};
+    --hero-button-font-size: #{$font-size-xl};
+    --hero-title-size: #{$font-size-7xl};
+    --hero-subtitle-size: #{$font-size-4xl};
+    --hero-min-height: 600px;
+  }
+
+  .stats {
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: $padding-8 $padding-0;
+  }
+
+  .stat {
+    --stat-label-size: #{$font-size-2xl};
+    --stat-value-size: #{$font-size-4xl};
+  }
+
+  .dejavu-videos {
+    grid-template-columns: repeat(4, 25%);
+    margin: $margin-4 $margin-6;
+  }
+
+  .dejavu-link {
+    width: 100%;
+  }
+
+  p {
+    font-size: $font-size-2xl;
+  }
+}
