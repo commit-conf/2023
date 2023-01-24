@@ -18,9 +18,16 @@ echo "Current folder: $(pwd)"
 rm -rf *
 rm -rf .github
 cp -R ../_site/* .
-git add -A
-git commit -m "${COMMIT_MESSAGE}"
-git push origin gh-pages
+
+# if there is anything to commit
+if [ -z "$(git status --porcelain)" ]; then
+  echo "Nothing to commit"
+else 
+  git add -A
+  git commit -m "${COMMIT_MESSAGE}"
+  git push origin gh-pages
+fi
+
 
 cd ..
 echo "Successfully deployed" 
