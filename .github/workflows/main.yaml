@@ -44,8 +44,6 @@ jobs:
       # compile
       - run: npm run build
       - name: Configure CI credentials
-        env:
-          CI_DEPLOY_KEY: ${{ secrets.CI_DEPLOY_KEY }}
         run: ./bin/configure-ci
       - name: deploy
         run: ./bin/deploy
