@@ -13,6 +13,7 @@ on:
       - ".eleventy.js"
       - ".github/**"
       - "bin/**"
+  workflow_dispatch:
 
 jobs:
   build:
