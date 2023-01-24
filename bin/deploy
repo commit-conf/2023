@@ -1,0 +1,23 @@
+#!/bin/bash
+
+set -e
+
+FOLDER=.gh-pages
+echo "Current folder: $(pwd)"
+if [ ! -d ${FOLDER} ]; then
+  # this can olny be on a local environment, not on CICD
+  echo "Warning: ${FOLDER} does not exist. Are you on CICD?"
+  exit 1
+fi
+
+cd ${FOLDER}
+echo "Current folder: $(pwd)"
+rm -rf *
+rm -rf .github
+cp -R ../_site/* .
+git add -A
+git commit -m "$(git log origin/master -1 --pretty=%B)"
+git push
+
+cd ..
+echo "Successfully deployed" 

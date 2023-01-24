@@ -27,6 +27,7 @@ jobs:
       - name: Checkout gh-pages branch on subfolder
         uses: actions/checkout@v3
         with:
+          ref: gh-pages
           path: .gh-pages
       # setup node
       - uses: actions/setup-node@v1
