@@ -18,4 +18,16 @@ module.exports = [
       },
     ],
   },
+  {
+    name: "Supporter", 
+    items: [
+      {
+        name: "rsi", 
+        href: "https://www.ruralserviciosinformaticos.com/", 
+      
+      },
+    
+    ],
+  },
 ];
+
