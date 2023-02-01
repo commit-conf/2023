@@ -19,6 +19,15 @@ module.exports = [
     ],
   },
   {
+    name: "Silver",
+    items: [
+      {
+        name: "bbva-it",
+        href: "https://www.bbvaitspain.com/",
+      },
+    ],
+  },
+  {
     name: "Supporter", 
     items: [
       {
