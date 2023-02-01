@@ -208,4 +208,8 @@ module.exports = [
     name: "XantarDev",
     href: "https://xantardev.org",
   },
+  {
+    name: "GDG Toledo",
+    href: "https://gdg.community.dev/gdg-toledo/",
+  },
 ];
