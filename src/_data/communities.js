@@ -66,6 +66,10 @@ module.exports = [
     href: "http://www.gdg.es",
   },
   {
+    name: "GDG Toledo",
+    href: "https://gdg.community.dev/gdg-toledo/",
+  },
+  {
     name: "GeoDevelopers",
     href: "http://meetup.com/Geo-Developers/",
   },
@@ -171,6 +175,11 @@ module.exports = [
     href: "https://www.meetup.com/phpmad/",
   },
   {
+    name: "Python España",
+    href: "https://es.python.org/",
+    svg: "true",
+  },
+  {
     name: "Python Madrid",
     href: "https://www.meetup.com/python-madrid/",
     svg: "true",
@@ -178,7 +187,7 @@ module.exports = [
   {
     name: "PyData Madrid",
     href: "https://meetup.com/PyData-Madrid/",
-    svg: "true"
+    svg: "true",
   },
   {
     name: "Rioja{dotnet}",
@@ -207,9 +216,5 @@ module.exports = [
   {
     name: "XantarDev",
     href: "https://xantardev.org",
-  },
-  {
-    name: "GDG Toledo",
-    href: "https://gdg.community.dev/gdg-toledo/",
   },
 ];
