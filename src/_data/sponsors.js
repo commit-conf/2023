@@ -28,15 +28,17 @@ module.exports = [
     ],
   },
   {
-    name: "Supporter", 
+    name: "Supporter",
     items: [
       {
-        name: "rsi", 
-        href: "https://www.ruralserviciosinformaticos.com/", 
-      
+        name: "rsi",
+        href: "https://www.ruralserviciosinformaticos.com/",
       },
-    
+      {
+        name: "Next Digital",
+        href: "https://www.nextdigital.es/",
+        svg: "true",
+      },
     ],
   },
 ];
-
