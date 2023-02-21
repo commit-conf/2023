@@ -25,6 +25,10 @@ module.exports = [
         name: "bbva-it",
         href: "https://www.bbvaitspain.com/",
       },
+      {
+        name: "Paradigma Digital", 
+        href: "https://www.paradigmadigital.com/", 
+      },
     ],
   },
   {
