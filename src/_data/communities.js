@@ -194,6 +194,10 @@ module.exports = [
     href: "http://www.riojadotnet.com/",
   },
   {
+    name: "Software Crafters Málaga",
+    href: "https://www.meetup.com/swcraftmlg/",
+  },
+  {
     name: "STCAsturias",
     href: "https://twitter.com/STCAsturias",
   },
