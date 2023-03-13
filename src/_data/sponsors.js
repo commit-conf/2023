@@ -29,6 +29,10 @@ module.exports = [
         name: "Paradigma Digital", 
         href: "https://www.paradigmadigital.com/", 
       },
+      {
+        name: "profile", 
+        href: "https://profile.es/", 
+      },
     ],
   },
   {
