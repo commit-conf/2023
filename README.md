@@ -1,12 +1,17 @@
-The source code of Commit Conf 2023. This project contains the source code of a website based on [eleventy](https://www.11ty.dev) and sass.
+The source code of Commit Conf 2023. This project contains the source code of a website based on [eleventy](https://www.11ty.dev) and [sass](https://sass-lang.com/).
 
-## Configuration
+## Getting Started
 
 ```bash
 
 # Install node dependencies, including eleventy
 npm i
 
+# Run the local server
+npm run watch
+
+# connect to local server
+sensible-browser http://localhost:8081
 ```
 
 ## Start local server

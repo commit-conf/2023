@@ -149,49 +149,89 @@
   max-height: 3.75rem;
 }
 
-.sponsors {
-  --sponsor-logo-size: 100px;
-  --sponsor-color: #{$color-gray-800};
-  border-color: var(--sponsor-color) !important;
-  .sponsor {
-    height: var(--sponsor-logo-size);
-    width: var(--sponsor-logo-size);
-    padding: $padding-2 $padding-4;
-    border: $border-width-1 solid var(--sponsor-color);
-    border-radius: 0 0 $border-radius $border-radius;
+.sponsor-category {
+  text-transform: uppercase;
+  font-size: $font-size-xs;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  margin-bottom: $margin-4;
+  border-bottom: 2px solid $color-gray-800;
+  padding: $padding-1 $padding-2;
+
+  &.diamond {
+    border-color: $color-red-500;
   }
-  .category {
-    width: var(--sponsor-logo-size);
-    color: $color-white;
-    background-color: var(--sponsor-color);
-    padding: $padding-1 $padding-2;
-    border-radius: $border-radius $border-radius 0 0;
-    font-size: $font-size-s;
-    text-align: center;
+  &.gold {
+    border-color: $color-yellow-500;
+  }
+  &.silver {
+    border-color: $color-gray-600;
+  }
+  &.supporter {
+    border-color: $color-gray-500;
+  }
+}
+
+// sponsors CSS extracted from
+// https://ishadeed.com/article/aligning-logos-css/
+.sponsors {
+  --sponsor-logo-width: 190px;
+  --sponsor-logo-height: 60px;
+  --multiplier: 1;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.sponsor {
+  padding: $padding-2 $padding-4;
+  border-radius: 0 0 $border-radius $border-radius;
+  border: 1px solid transparent;
+  display: flex;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: $color-blue-400;
+  }
+
+  & :is(img, svg) {
+    display: block;
+    max-width: 100%;
+    width: calc(var(--sponsor-logo-width) * var(--multiplier));
+    height: calc(var(--sponsor-logo-height) * var(--multiplier));
+    object-fit: contain;
+    max-height: none;
+  }
+
+  & picture {
+    display: flex;
   }
 }
 
 .diamond {
-  --sponsor-logo-size: 160px;
-  --sponsor-color: #{$color-pink-800};
+  --multiplier: 1.8;
 }
 
 .platinum {
-  --sponsor-logo-size: 140px;
-  --sponsor-color: #{$color-teal-800};
+  --multiplier: 1.5;
 }
 
 .gold {
-  --sponsor-logo-size: 120px;
-  --sponsor-color: #{$color-blue-800};
+  --multiplier: 1.2;
 }
 
 .silver {
-  --sponsor-color: #{$color-red-800};
 }
 
 .bronze {
-  --sponsor-color: #{$color-orange-800};
+}
+
+// patch for this specific logo
+.rsi {
+  --multiplier: 0.7;
 }
 
 @include medium {

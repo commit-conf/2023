@@ -3,12 +3,10 @@
     <h1>{{OurSponsors}}</h1>
     {% import "macros/collaborator-logo.njk" as logo %}
     {% for category in sponsors %}
-      <div class="flex-row flex-wrap gap-1 margin-bottom {{'padding-top-10' if loop.index0 === 0}} sponsors {{category.name | slugify}}">
+      <h2 class="sponsor-category {{category.name | slugify}}">{{category.name}}</h2>
+      <div class="gap-2 margin-bottom sponsors {{category.name | slugify}}">
         {% for sponsor in category.items %}
-          <div class="cateogry-wrapper flex-column">
-            <span class="category">{{category.name}}</span>
-            {{ logo.render(sponsor, 'sponsors', 'flex-row items-center justify-center sponsor') }}
-          </div>
+          {{ logo.render(sponsor, 'sponsors', 'flex-row items-center justify-center sponsor') }}
         {% endfor %}
       </div>
     {% endfor %}
