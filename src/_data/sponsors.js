@@ -33,6 +33,10 @@ module.exports = [
         name: "profile", 
         href: "https://profile.es/", 
       },
+      {
+        name: "Sngular", 
+        href: "https://www.sngular.com/", 
+      },
     ],
   },
   {
