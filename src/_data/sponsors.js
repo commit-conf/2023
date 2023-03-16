@@ -47,6 +47,10 @@ module.exports = [
         href: "https://www.nextdigital.es/",
         svg: "true",
       },
+      {
+        name: "Adidas",
+        href: "https://www.adidas.es/",
+      },
     ],
   },
 ];
