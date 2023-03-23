@@ -55,6 +55,10 @@ module.exports = [
         name: "Adidas",
         href: "https://www.adidas.es/",
       },
+      {
+        name: "Joor",
+        href: "https://www.joor.com/",
+      },
     ],
   },
 ];
