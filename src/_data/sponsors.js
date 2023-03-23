@@ -59,6 +59,10 @@ module.exports = [
         name: "Joor",
         href: "https://www.joor.com/",
       },
+      {
+        name: "Globant",
+        href: "https://www.globant.com/es",
+      },
     ],
   },
 ];
