@@ -16,6 +16,10 @@ module.exports = [
         href: "https://www.autentia.com/",
         svg: "true",
       },
+      {
+        name: "Openbank",
+        href: "https://www.openbank.es/",
+      },
     ],
   },
   {
