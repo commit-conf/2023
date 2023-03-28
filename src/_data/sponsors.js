@@ -52,7 +52,7 @@ module.exports = [
         svg: "true",
       },
       {
-        name: "Adidas",
+        name: "adidas",
         href: "https://www.adidas.es/",
       },
       {
