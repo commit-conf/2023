@@ -18,7 +18,7 @@ module.exports = [
       },
       {
         name: "Openbank",
-        href: "https://www.openbank.es/",
+        href: "https://www.openbank.es/ofertas-empleo-it",
       },
     ],
   },
