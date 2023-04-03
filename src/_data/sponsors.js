@@ -41,6 +41,10 @@ module.exports = [
         name: "Sngular", 
         href: "https://www.sngular.com/careers/all/all/?utm_source=Web+commitconf&utm_medium=Link+Logo&utm_campaign=Commitconf+2023&utm_id=002341245", 
       },
+      {
+        name: "Twenix", 
+        href: "https://twenix.com/", 
+      },
     ],
   },
   {
