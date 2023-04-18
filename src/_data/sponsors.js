@@ -71,6 +71,10 @@ module.exports = [
         name: "Globant",
         href: "https://www.globant.com/es",
       },
+      {
+        name: "Apiumhub",
+        href: "https://apiumhub.com/",
+      },
     ],
   },
 ];
