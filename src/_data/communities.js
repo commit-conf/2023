@@ -159,6 +159,10 @@ module.exports = [
     href: "https://www.meetup.com/MSCoders/",
   },
   {
+    name: "My Tech Plan",
+    href: "https://www.mytechplan.com/",
+  },
+  {
     name: "NodeJSMadrid",
     href: "https://www.meetup.com/es/Node-js-Madrid",
   },
