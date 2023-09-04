@@ -1,4 +1,6 @@
 {
+  "Video": "Vídeo",
+  "Pictures": "Fotos",
   "locale": "es",
   "skipToContent": "Saltar al contenido",
   "goHome": "Ir a inicio",
@@ -20,8 +22,8 @@
   "talks": "charlas",
   "attendees": "asistentes",
   "communities": "comunidades",
-  "2019VideoSummary": "Resumen de Commit 2019",
-  "2019VideoSummaryDesc": "Haz clic para reproducir la grabación de Resumen de Commit 2019",
+  "2023VideoSummary": "Resumen de Commit 2023",
+  "2023VideoSummaryDesc": "Haz clic para reproducir la grabación de Resumen de Commit 2023",
   "2023ThemeTitle": "No se vive igual en vídeo",
   "2023ThemeSubtitle": "Apuntarte una lista de cosas para ver el próximo fin de semana. Totalmente. En cuanto saques tiempo.",
   "2023ThemeDesc": "<p>Commit no es solo un evento de más de 80 sesiones. Es la oportunidad de conocer gente nueva con intereses similares, charlar con los ponentes, y averiguar lo que buscan las empresas punteras del país.</p><p>Puedes quedarte en casa y tratar de seguirlo online — todos lo hemos intentado durante la pandemia. No funcionó.</p>",
